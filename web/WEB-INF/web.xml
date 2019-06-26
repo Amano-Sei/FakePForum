@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+  <display-name>PForum</display-name>
+  <description>
+     My forum!
+  </description>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/user/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChecknameServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.ChecknameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChecknameServlet</servlet-name>
+        <url-pattern>/checknameServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/user/registerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/user/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserEditServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.EditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserEditServlet</servlet-name>
+        <url-pattern>/user/manage/editServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChangepasswordServlet</servlet-name>
+        <servlet-class>sei.amano.user.servlet.ChangepasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangepasswordServlet</servlet-name>
+        <url-pattern>/user/manage/changepasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addServlet</servlet-name>
+        <servlet-class>sei.amano.content.servlet.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addServlet</servlet-name>
+        <url-pattern>/content/addServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>sei.amano.servlet.VerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/verificationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>sei.amano.content.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/content/deleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>sei.amano.content.servlet.EditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/content/editServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>sei.amano.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>BlacklistFilter</filter-name>
+        <filter-class>sei.amano.filter.BlacklistFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>BlacklistFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>sei.amano.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>NavFilter</filter-name>
+        <filter-class>sei.amano.filter.NavFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>NavFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>StatusFilter</filter-name>
+        <filter-class>sei.amano.user.filter.StatusFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>StatusFilter</filter-name>
+        <url-pattern>/user/manage/status.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>ListFilter</filter-name>
+        <filter-class>sei.amano.content.filter.ListFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ListFilter</filter-name>
+        <url-pattern>/content/list.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>EditFilter</filter-name>
+        <filter-class>sei.amano.content.filter.EditFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EditFilter</filter-name>
+        <url-pattern>/content/edit.jsp</url-pattern>
+    </filter-mapping>
+</web-app>

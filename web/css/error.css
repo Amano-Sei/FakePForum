@@ -1,0 +1,6 @@
+.errorpage{
+	background-color: #f3f3f3;
+	background-image: url("/PForum/img/page/error.png");
+	background-repeat: no-repeat;
+	width: 100%;
+}

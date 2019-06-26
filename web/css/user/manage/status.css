@@ -1,0 +1,76 @@
+.lh-1{
+	line-height: 1.25;
+}
+.container{
+	max-width: 960px;
+}
+nav.position-sticky{
+	height: fit-content;
+	top: 0.8rem;
+}
+div.row label{
+	margin-top: .8rem;
+}
+
+div.row div.custom-file{
+	margin-top: -.8rem;
+	margin-bottom: .5rem;
+}
+h6 a:hover, h6 a:focus{
+	text-decoration: none;
+}
+
+
+a.formodal{
+	color: inherit;
+}
+a.formodal:hover, a.formodal:focus{
+	text-decoration: none;
+}
+
+.udata-row{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	padding: 5px;
+	border-bottom: 1px solid #dee2e6;
+}
+
+
+.udata-title{
+	font-size: 0.8rem;
+	margin: 0;
+	color: #a9a9a9;
+}
+.udata-content{
+	font-size: 1.6rem;
+	margin: 0;
+	text-align: right;
+}
+
+.udata-main{
+	-ms-flex: 0 0 75%;
+	flex: 0 0 75%;
+	max-width: 70%;
+	padding: 0 1rem;
+	margin-right: 1rem;
+	height: auto;
+	height: min-content;
+}
+
+.udata-side{
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 20%;
+	padding: 1rem;
+	text-align: center;
+	height: auto;
+	height: min-content;
+}
+
+.udata-side p{
+	text-align: left;
+}

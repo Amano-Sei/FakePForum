@@ -1,0 +1,126 @@
+.container{
+	max-width: 960px;
+}
+button.disabled{
+	pointer-events: none;
+}
+
+.card-header{
+	padding: .5rem;
+}
+.card-header .btn-link{
+	height: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+span.fa{
+	height: auto;
+	width: auto;
+}
+
+.commentuname a{
+	color: #444444;
+}
+
+.commentuname a:focus, .commentuname a:hover{
+	text-decoration: none;
+}
+
+.commentuname, .commentctime{
+	margin: 0;
+}
+
+.commentctime{
+	font-size: 0.8rem;
+	color: #a9a9a9;
+}
+
+.mycard{
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: .6rem;
+	width: 95%;
+	margin: 0 auto 1.5rem;
+}
+@media(min-width: 768px){
+	.mycard{
+  		width: 75%;
+	}
+}
+
+.mycard-header{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 0;
+	background-color: rgba(0, 0, 0, 0.03);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	padding: 0.5rem;
+}
+
+.mycard-header img{
+	border-radius: .25rem;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.mycard-body {
+  	-ms-flex: 1 1 auto;
+ 	 flex: 1 1 auto;
+ 	 padding: 0.5rem;
+ 	 height: 10rem;
+}
+
+.mycard-body>.mycard-text, .mycard-body>textarea{
+	white-space: pre;
+	height: 100%;
+}
+
+.mycard-footer {
+	display: flex;
+	padding: 0.5rem;
+  	background-color: rgba(0, 0, 0, 0.03);
+  	border-top: 1px solid rgba(0, 0, 0, 0.125);
+  	justify-content: flex-end;
+}
+.mycard-footer .btn{
+	margin-left: 1rem;
+	white-space: nowrap;
+	width: auto;
+}
+
+.myinvalid-feedback{
+	display: none;
+	align-self: flex-start;
+	width: 100%;
+	font-size: 80%;
+	color: #dc3545;
+}
+.myvalid-feedback{
+	display: none;
+	align-self: flex-start;
+	width: 100%;
+	font-size: 80%;
+	color: #28a745;
+}
+
+.willnone{
+	align-self: flex-start;
+	width: 100%;
+	margin-left: .5rem;
+	font-size: 1.2rem;
+	color: #a9a9a9;
+}
+
+button.btn.disabled{
+	pointer-events: none;
+}
